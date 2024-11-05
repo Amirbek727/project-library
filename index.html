@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mening Kutubxonam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Mening Kutbxonam</h1>
+        <button class="add-book-btn" onclick="showLoading()">+ Yangi kitob</button>
+        
+        <div id="form-container" class="form-container">
+            <div id="loading-bar" class="loading-bar"></div>
+            <form id="book-form" class="book-form" onsubmit="addBook(event)">
+                <label for="book-title">Kitob nomi</label>
+                <input type="text" id="book-title" placeholder="Kitob nomini kiriting" required>
+                
+                <label for="author">Muallif</label>
+                <input type="text" id="author" placeholder="Muallifni kiriting" required>
+                
+                <label for="year">Yili</label>
+                <input type="text" id="year" placeholder="Yilni kiriting" required>
+                
+                <label for="status">Status</label>
+                <div class="status">
+                    <input type="radio" id="completed" name="status" value="O'qib Tugatdim" required>
+                    <label for="completed">O'qib Tugatdim</label>
+                    <input type="radio" id="reading" name="status" value="O'qiyapman" required>
+                    <label for="reading">O'qiyapman</label>
+                </div>
+                
+                <button type="submit">Qo'shish</button>
+            </form>
+        </div>
+
+        <div id="book-list" class="book-list">
+            <!-- Yangi qo'shilgan kitoblar shu yerda ko'rinadi -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
